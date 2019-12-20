@@ -16,20 +16,20 @@ public class Work3_1 {
         System.out.println();
         //сама сортировка
         int temp = 0;
-        for (int i = 0; i < array.length; i++) {
-            int min = array[i];
-            int imin = i;
-            for (int j = i + 1; j < array.length; j++) {
-                if (array[j] < min) {
-                    min = array[j];
-                    imin = j;
+            for (int i = 0; i < array.length; i++) {
+                int min = array[i];
+                int imin = i;
+                for (int j = i + 1; j < array.length; j++) {
+                    if (array[j] < min) {
+                        min = array[j];
+                        imin = j;
+                    }
                 }
-            }
-            if (i != imin) {
-                temp = array[i];
-                array[i] = array[imin];
-                array[imin] = temp;
-            }
+                if (i != imin) {
+                    temp = array[i];
+                    array[i] = array[imin];
+                    array[imin] = temp;
+                }
         }
         System.out.println("Отсортированный массив: " + Arrays.toString(array));
     }

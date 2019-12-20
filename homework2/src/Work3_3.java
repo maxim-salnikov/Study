@@ -15,7 +15,7 @@ public class Work3_3 {
         }
         System.out.println();
         //алгоритм
-        int temp;
+        int temp = 0;
         int left = 0;
         int right = array.length - 1;
         do {
