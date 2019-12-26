@@ -79,11 +79,11 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Main" />
       <item itemvalue="Application.Work2_1 (1)" />
-      <item itemvalue="Application.Work2_3" />
       <item itemvalue="Application.Work2_1" />
       <item itemvalue="Application.Work2_2" />
-      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Work2_3" />
     </list>
     <recent_temporary>
       <list>
