@@ -9,19 +9,20 @@ public class h5 {
     }
 }
     enum Countries implements ICountries, Comparable<Countries> {
-        RUSSIA (105_600_874, 990_000_000),
-        BELARUS (207_600, 10_000_000),
-        UKRAINE (30_600_874, 300_000_000),
-        ENGLAND (1_600_874, 60_000_000),
-        LATVIA (600_874, 40_000_000),
-        NORWAY (900_800, 52_000_000),
-        SWEDEN (159_600_874, 8_000_000),
-        FRANCE (300_870_874, 90_000_000),
-        AUSTRIA (49_600_874, 5_000_000),
-        SPAIN (458_600_000, 58_000_000);
+        RUSSIA(105_600_874, 990_000_000),
+        BELARUS(207_600, 10_000_000),
+        UKRAINE(30_600_874, 300_000_000),
+        ENGLAND(1_600_874, 60_000_000),
+        LATVIA(600_874, 40_000_000),
+        NORWAY(900_800, 52_000_000),
+        SWEDEN(159_600_874, 8_000_000),
+        FRANCE(300_870_874, 90_000_000),
+        AUSTRIA(49_600_874, 5_000_000),
+        SPAIN(458_600_000, 58_000_000);
 
         private int countOfPeople;
         private int square;
+
         Countries(int square, int countOfPeople) {
             this.square = square;
             this.countOfPeople = countOfPeople;
@@ -35,5 +36,15 @@ public class h5 {
         @Override
         public int getSquare() {
             return square;
+        }
+
+        public int compare(Countries anotherCountries) {
+            if (this.square == anotherCountries.getSquare()) {
+                return 0;
+            } else if (this.square < anotherCountries.getSquare()) {
+                return -1;
+            } else {
+                return 1;
+            }
         }
     }

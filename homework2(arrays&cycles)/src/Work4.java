@@ -1,20 +1,15 @@
 import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Work4 {
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        System.out.println("Введите размер массива: ");
-        int size = in.nextInt();
-        int[] array = new int[size];
+        int[] array = new int[10];
+        Random rand = new Random(10);
         for (int i = 0; i < array.length; i++) {
-            System.out.println("Введите значение " + (i + 1) + "-го элемента массива");
-            array[i] = in.nextInt();
+            array[i] = rand.nextInt(10);
         }
-        System.out.println("Исходный массив:");
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i] + " ");
-        }
+        System.out.println("Исходный массив: " + Arrays.toString(array));
             //сортировка пузырьком
             boolean sorted = false;
             int temp = 0;
@@ -30,6 +25,24 @@ public class Work4 {
                 }
             }
             System.out.println("Отсортированный массив: " + Arrays.toString(array));
-
+        //удаление дубликатов
+        int dubl = 0;
+        for (int i = 1; i < array.length; i++){
+            if(array[i-1] == array[i]){
+                dubl++;
+            }
+        }
+        int[] arraySorted = new int[array.length - dubl];
+        int index = 0;
+        for (int i = 1; i < array.length; i++){
+            if(array[i] == array[i-1]){
+                arraySorted[index] = array[i];
+            }
+            if(array[i] != array[i-1]){
+                index++;
+                arraySorted[index] = array[i];
+            }
+        }
+        System.out.println("Массив без дубликатов: " + Arrays.toString(arraySorted));
     }
 }
