@@ -15,32 +15,32 @@ public class Work3_6 {
         System.out.println("Отсортированный: " + Arrays.toString(array));
     }
 
-    public static void quick(int[] numbers, int left, int right) {
+    public static void quick(int[] arr, int left, int right) {
         int left1 = left;
         int right1 = right;
-        int middle = numbers[(left1 + right1) / 2];
+        int middle = arr[(left1 + right1) / 2];
         do {
-            while (numbers[left1] < middle) {
+            while (arr[left1] < middle) {
                 left1++;
             }
-            while (numbers[right1] > middle) {
+            while (arr[right1] > middle) {
                 right1--;
             }
             if (left1 <= right1) {
                 if (left1 < right1) {
-                    int temp = numbers[left1];
-                    numbers[left1] = numbers[right1];
-                    numbers[right1] = temp;
+                    int temp = arr[left1];
+                    arr[left1] = arr[right1];
+                    arr[right1] = temp;
                 }
                 left1++;
                 right1--;
             }
         } while (left1 <= right1);
         if (left1 < right){
-            quick(numbers, left1, right);
+            quick(arr, left1, right);
         }
         if (left < right1){
-            quick(numbers, left, right1);
+            quick(arr, left, right1);
         }
     }
 }
