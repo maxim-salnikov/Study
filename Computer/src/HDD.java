@@ -1,3 +1,4 @@
+import api.HDDStandarts;
 import api.IParts;
 import api.IStandart;
 
@@ -13,10 +14,10 @@ public class HDD implements IParts {
         return standarts;
     }
 
-    @Override
-    public boolean compare() {
-        return true;
-    }
+//    @Override
+//    public boolean compare() {
+//        return true;
+//    }
 
     @Override
     public boolean test() {

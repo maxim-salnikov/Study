@@ -13,10 +13,11 @@ public class CPU implements IParts {
         return standarts;
     }
 
-    @Override
-    public boolean compare() {
-        return true;
-    }
+//    @Override
+//    public boolean compare() {
+//        return true;
+//    }
+
     @Override
     public boolean test () {
             return true;
