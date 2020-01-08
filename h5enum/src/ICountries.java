@@ -1,4 +1,4 @@
 public interface ICountries {
-    public int getPopulation();
-    public int getSquare();
+    int getPopulation();
+    int getSquare();
 }
