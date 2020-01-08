@@ -28,5 +28,15 @@ public class Computer {
             System.out.println("Не запустился");
             return false;
         }
+
+//        for(IStandart standart : standarts){
+//            if(parts == standarts){
+//                System.out.println("Пуск");
+//                return true;
+//            } else {
+//                System.out.println("Выкл");
+//                return false;
+//            }
+//        }
     }
 }
