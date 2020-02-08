@@ -1,9 +1,12 @@
+
 public class GenericMain2 {
+
     public static void main(String[] args) {
-        Box<Integer> boxInt = new Box<>();
+        NumberBox<Integer> boxInt = new NumberBox<>();
         boxInt.setItem(123);
 
         Integer item = boxInt.getItem();
+        long l = boxInt.incrementAndGet();
 
         print(boxInt);
 
@@ -14,7 +17,9 @@ public class GenericMain2 {
 
         print(boxStr);
     }
-    private static void print(Box box){
+
+
+    public static void print(Box box){
         System.out.println(box.getItem());
     }
 }

@@ -1,4 +1,4 @@
-public class Box<T> { //T абстрактный класс
+public class Box<T> {
     private T item;
 
     public T getItem() {
